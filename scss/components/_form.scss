@@ -1,0 +1,99 @@
+.form {
+    gap: 20px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 2px;
+    @include flex(stretch);
+    background: $c-rgba-dark;
+    justify-content: space-between;
+    @media screen and (max-width: 1180px) {
+        gap: 0;
+        padding: 30px 27px;
+        flex-direction: column;
+    }
+
+    &-group {
+        gap: 20px; 
+        width: 100%;
+        max-width: 745px;
+        @include flex(center);
+        justify-content: space-between;
+        &-item {
+            &.people {
+                width: min(140px, 100%);
+            }
+
+            @media screen and (max-width: 700px) {
+                margin-bottom: 45px;
+                width: 100%;
+                &.people {
+                    width: 100%;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &-subtitle {
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 400;
+            text-transform: uppercase;
+            @media screen and (max-width: 425px) {
+                font-size: 17px;
+            }
+        }
+
+        &-label {
+            position: relative;
+            display: block;
+            &.date {
+                &::before {
+                    background-image: url('/img/icons/calendar.svg');
+                }
+            }
+
+            &.guests {
+                &::before {
+                    background-image: url('/img/icons/people.svg');
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 32px;
+                height: 32px;
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        @media screen and (max-width: 1180px) {
+            margin-bottom: 35px;
+            max-width: none;
+        }
+
+        @media screen and (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        margin-bottom: 25px;
+        padding: 34px 22px;
+    }
+}
+
+.input {
+    width: 100%;
+    color: $c-white;
+    font-weight: 500;
+    user-select: none;
+    letter-spacing: 0.05em;
+    @include font(22px, 27px);
+}

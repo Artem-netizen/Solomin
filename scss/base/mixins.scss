@@ -1,0 +1,9 @@
+@mixin flex($items) {
+    display: flex;
+    align-items: $items;
+}
+
+@mixin font($fz, $lh) {
+    font-size: $fz;
+    line-height: $lh;
+}

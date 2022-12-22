@@ -1,0 +1,109 @@
+.header {
+    padding-top: 26px;
+    padding-bottom: 23px;
+    background-image: $c-gradient-180;
+    &-wrap {
+        @include flex(center);
+        justify-content: space-between;
+    }
+
+    &-nav,
+    &-info {
+        @include flex(center);
+    }
+
+    &-info {
+        &-mobile {
+            margin-bottom: 45px;
+            @include flex(center);
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media screen and (max-width: 1180px) {
+            display: none;
+        }
+    }
+
+    &-desc {
+        margin-top: 84px;
+        height: 100%;
+        @include flex(center);
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 700px) {
+            display: none;
+        }
+
+        &.mobile {
+            display: none;
+            @media screen and (max-width: 700px) {
+                margin-top: 0;
+                display: flex;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1180px) {
+        .social:not(.menu) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        position: fixed;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 22px;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 28px 0;
+    }
+}
+
+//navigation
+.nav {
+    margin-left: 42px;
+    &__list {
+        @include flex(center);
+        @media screen and (max-width: 700px) {
+            &.mobile {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__item {
+        margin-right: 49px;
+        &:last-child {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+        @media screen and (max-width: 700px) {
+            margin-bottom: 50px;
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        transition: .2s;
+        &:hover {
+            color: $c-grey-light;
+        }
+    }
+
+    &.mobile {
+        display: none;
+        @media screen and (max-width: 700px) {
+            margin-top: 36px;
+            margin-left: 0;
+            @include flex(center);
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+// base
+@import "./base/reset.scss";
+@import "./base/vars.scss";
+@import "./base/mixins.scss";
+@import "./base/layout.scss";
+
+//blocks
+@import "./blocks/intro/intro";
+@import "./blocks/intro/slider";
+
+// components
+@import "./components/header";
+@import "./components/form";
+@import "./components/menu";
